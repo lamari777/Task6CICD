@@ -43,91 +43,91 @@ describe('integerToRoman', function() {
 
   // Errors
   it('should throw error for input 0', function() {
-    expect(() => integerToRoman(0)).to.throw("The number must be between 1 and 3999.");
+    expect(() => integerToRoman(0)).to.throw('The number must be between 1 and 3999.');
   });
 
   it('should throw error for negative numbers', function() {
-    expect(() => integerToRoman(-1)).to.throw("The number must be between 1 and 3999.");
+    expect(() => integerToRoman(-1)).to.throw('The number must be between 1 and 3999.');
   });
 
   it('should throw error for input over 3999', function() {
-    expect(() => integerToRoman(4000)).to.throw("The number must be between 1 and 3999.");
+    expect(() => integerToRoman(4000)).to.throw('The number must be between 1 and 3999.');
   });
 });
 
 
 describe('romanToInteger', function() {
   it('should convert "I" to 1', function() {
-    expect(romanToInteger("I")).to.equal(1);
+    expect(romanToInteger('I')).to.equal(1);
   });
 
   it('should convert "II" to 2', function() {
-    expect(romanToInteger("II")).to.equal(2);
+    expect(romanToInteger('II')).to.equal(2);
   });
 
   it('should convert "III" to 3', function() {
-    expect(romanToInteger("III")).to.equal(3);
+    expect(romanToInteger('III')).to.equal(3);
   });
 
   it('should convert "IV" to 4', function() {
-    expect(romanToInteger("IV")).to.equal(4);
+    expect(romanToInteger('IV')).to.equal(4);
   });
 
   it('should convert "IX" to 9', function() {
-    expect(romanToInteger("IX")).to.equal(9);
+    expect(romanToInteger('IX')).to.equal(9);
   });
 
   it('should convert "X" to 10', function() {
-    expect(romanToInteger("X")).to.equal(10);
+    expect(romanToInteger('X')).to.equal(10);
   });
 
   it('should convert "XXX" to 30', function() {
-    expect(romanToInteger("XXX")).to.equal(30);
+    expect(romanToInteger('XXX')).to.equal(30);
   });
 
   it('should convert "MMM" to 3000', function() {
-    expect(romanToInteger("MMM")).to.equal(3000);
+    expect(romanToInteger('MMM')).to.equal(3000);
   });
 
   it('should convert "MCM" to 1900', function() {
-    expect(romanToInteger("MCM")).to.equal(1900);
+    expect(romanToInteger('MCM')).to.equal(1900);
   });
 
   it('should convert "MMMCMXCIX" to 3999', function() {
-    expect(romanToInteger("MMMCMXCIX")).to.equal(3999);
+    expect(romanToInteger('MMMCMXCIX')).to.equal(3999);
   });
 
   // Errors
   it('should throw error for invalid characters "ABC"', function() {
-    expect(() => romanToInteger("ABC")).to.throw("The Roman numeral contains invalid characters.");
+    expect(() => romanToInteger('ABC')).to.throw('The Roman numeral contains invalid characters.');
   });
 
   it('should throw error for empty string', function() {
-    expect(() => romanToInteger("")).to.throw("Input must be a valid Roman numeral.");
+    expect(() => romanToInteger('')).to.throw('Input must be a valid Roman numeral.');
   });
 
   it('should throw error for non-canonical form "IIII"', function() {
-    expect(() => romanToInteger("IIII")).to.throw("The Roman numeral is not in canonical form.");
+    expect(() => romanToInteger('IIII')).to.throw('The Roman numeral is not in canonical form.');
   });
 
   it('should throw error for invalid repetition "VV"', function() {
-    expect(() => romanToInteger("VV")).to.throw("The Roman numeral is not in canonical form.");
+    expect(() => romanToInteger('VV')).to.throw('The Roman numeral is not in canonical form.');
   });
 
   it('should throw error for invalid repetition "XXXX"', function() {
-    expect(() => romanToInteger("XXXX")).to.throw("The Roman numeral is not in canonical form.");
+    expect(() => romanToInteger('XXXX')).to.throw('The Roman numeral is not in canonical form.');
   });
 
   it('should throw error for invalid format "CMM"', function() {
-    expect(() => romanToInteger("CMM")).to.throw("The Roman numeral is not in canonical form.");
+    expect(() => romanToInteger('CMM')).to.throw('The Roman numeral is not in canonical form.');
   });
 
   it('should throw error for invalid prefix "IMM"', function() {
-    expect(() => romanToInteger("IMM")).to.throw("The Roman numeral is not in canonical form.");
+    expect(() => romanToInteger('IMM')).to.throw('The Roman numeral is not in canonical form.');
   });
 
   it('should throw error for invalid repetition "DD"', function() {
-    expect(() => romanToInteger("DD")).to.throw("The Roman numeral is not in canonical form.");
+    expect(() => romanToInteger('DD')).to.throw('The Roman numeral is not in canonical form.');
   });
 });
 
