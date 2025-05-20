@@ -1,0 +1,17 @@
+{
+  "name": "task6cicd",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "eslint": "^9.27.0",
+    "mocha": "^11.4.0"
+  }
+}
