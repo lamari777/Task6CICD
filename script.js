@@ -37,6 +37,7 @@ function integerToRoman(num) {
       num -= value;       // Subtract the numeral's value from num.
     }
   }
+  gtag('event', 'integerToRoman', {'result': result});
   return result;
 }
 
@@ -95,7 +96,7 @@ function romanToInteger(roman) {
   if (reconversion !== roman) {
     throw new Error('The Roman numeral is not in canonical form.');
   }
-  
+  gtag('event', 'romanToInteger', {'total': total});
   return total;
 }
 
