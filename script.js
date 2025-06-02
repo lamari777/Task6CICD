@@ -128,14 +128,32 @@ function handleConversion() {
       // Convert the integer to a Roman numeral.
       const roman = integerToRoman(num);
       resultDiv.textContent = `Roman Numeral: ${roman}`;
+
+      gtag('event', 'conversion_success', {
+        event_category: 'Conversion',
+        event_label: 'intToRoman',
+        value: num
+      });
     } else if (mode === 'romanToInt') {
       // Convert the Roman numeral to an integer.
       const num = romanToInteger(input);
       resultDiv.textContent = `Integer: ${num}`;
+
+      gtag('event', 'conversion_success', {
+        event_category: 'Conversion',
+        event_label: 'romanToInt',
+        value: num
+      });
     }
   } catch (error) {
     // Display any error messages encountered during conversion.
     errorDiv.textContent = error.message;
+
+    gtag('event', 'conversion_error', {
+      event_category: 'Error',
+      event_label: mode,
+      value: input
+    });
   }
 }
 
